@@ -2,8 +2,8 @@
     "builders":[
         {
             "type":"amazon-ebs",
-            "access_key":"AKIAQRE5VDV3P3ROYYMX",
-            "secret_key":"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",
+            "access_key":"",
+            "secret_key":"",
             "region":"us-east-1",
             "ami_name":"ubuntu-nginx-project3",
             "source_ami":"ami-052efd3df9dad4825",
