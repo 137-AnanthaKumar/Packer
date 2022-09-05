@@ -1,0 +1,35 @@
+{
+    "builders":[
+        {
+            "type":"amazon-ebs",
+            "access_key":"AKIAQRE5VDV3P3ROYYMX",
+            "secret_key":"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",
+            "region":"us-east-1",
+            "ami_name":"ubuntu-nginx-project5",
+            "source_ami":"ami-052efd3df9dad4825",
+            "instance_type":"t2.micro",
+            "ssh_username":"ubuntu"
+
+        },
+        {
+            "type":"azure-arm",
+            "client_secret":".a-8Q~bt55WTwrnrSWsUqQvoUUpj43MJZxlEecyW",
+            "client_id":"d8cf279c-4094-48c5-a420-8f072d8869ec",
+            "subscription_id":"10f689f8-2b5a-4010-abc6-deca7c27ad09",
+            "image_publisher":"Canonical",
+            "image_offer":"UbuntuServer",
+            "image_sku":"18.04-LTS",
+            "location":"East US",
+            "os_type":"Linux",
+            "managed_image_name":"ubuntu-nginx-project5",
+            "managed_image_resource_group_name":"azure-rg"
+        }
+    ],
+    "provisioners":[{
+        "type":"shell",
+        "script":"setup.sh"
+    }
+       
+    ]
+    
+}

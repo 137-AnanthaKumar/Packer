@@ -1,0 +1,25 @@
+{
+    "builders":[
+        {
+            "type":"amazon-ebs",
+            "access_key":"AKIAQRE5VDV3P3ROYYMX",
+            "secret_key":"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",
+            "region":"us-east-1",
+            "ami_name":"ubuntu-nginx-project2",
+            "source_ami":"ami-052efd3df9dad4825",
+            "instance_type":"t2.micro",
+            "ssh_username":"ubuntu"
+
+        }
+    ],
+    "provisioners":[{
+        "type":"shell",
+        "inline":[
+            "sudo apt update",
+            "sudo apt install nginx -y"
+       ]
+    }
+       
+    ]
+    
+}
